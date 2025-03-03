@@ -10,7 +10,9 @@
 			"require": "./dist/index.js"
 		}
 	},
-	"files": ["./dist/*"],
+	"files": [
+		"./dist/*"
+	],
 	"scripts": {
 		"prepare": "husky",
 		"prepublishOnly": "yarn build",
@@ -29,10 +31,18 @@
 		"self-update": "yarn set version berry"
 	},
 	"lint-staged": {
-		"./**/*.{js,ts,cjs,mjs}": ["yarn lint:fix"],
-		"./**/*.{js,ts,cjs,mjs,json}": ["yarn format:fix"]
+		"./**/*.{js,ts,cjs,mjs}": [
+			"yarn lint:fix"
+		],
+		"./**/*.{js,ts,cjs,mjs,json}": [
+			"yarn format:fix"
+		]
 	},
-	"keywords": ["PurgeCSS", "Vite", "Vite Plugin"],
+	"keywords": [
+		"PurgeCSS",
+		"Vite",
+		"Vite Plugin"
+	],
 	"peerDependencies": {
 		"vite": "^6"
 	},
@@ -69,5 +79,5 @@
 	"engines": {
 		"node": ">=23.0.0"
 	},
-	"packageManager": "yarn@4.6.0"
+	"packageManager": "yarn@4.7.0"
 }
