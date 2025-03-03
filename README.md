@@ -55,12 +55,12 @@ Load plugin using async await (so, that it could be used as devDependencies).
 const defaultPlugins = []
 
 export default defineConfig(async ({ command, mode, isSsrBuild, isPreview }) => {
-	if (command === 'build') {
-  const { default: pluginPurgeCss } = await import('@myelophone/vite-plugin-purgecss')
-		defaultPlugins.push(pluginPurgeCss())
-	}
+  if (command === 'build') {
+    const { default: pluginPurgeCss } = await import('@myelophone/vite-plugin-purgecss')
+    defaultPlugins.push(pluginPurgeCss())
+  }
  return {
-		plugins: defaultPlugins,
+  plugins: defaultPlugins,
  }
 }
 
