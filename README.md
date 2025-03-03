@@ -1,7 +1,10 @@
 # @myelophone/vite-plugin-purgecss
 
-[Vite](https://vitejs.dev/) plugin for removing unused CSS from generated
-bundles using [PurgeCSS](https://purgecss.com/). As @mojojoejo/vite-plugin-purgecss has been depreciated.
+[Vite](https://vitejs.dev/) plugin for removing unused CSS from generated bundles using [PurgeCSS](https://purgecss.com/).
+
+As @mojojoejo/vite-plugin-purgecss has been depreceated.
+
+This plugin is with actual updated dependencies.
 
 ## 📦 Install
 
@@ -14,7 +17,7 @@ npm install --save-dev @myelophone/vite-plugin-purgecss
 **Using yarn**:
 
 ```sh
-yarn add --dev @myelophone/vite-plugin-purgecss
+yarn add -D @myelophone/vite-plugin-purgecss
 ```
 
 **Using pnpm**:
@@ -39,6 +42,27 @@ export default {
     pluginPurgeCss(),
   ],
 };
+
+```
+
+### Lazy
+
+Load plugin using async await (so, that it could be used as devDependencies).
+
+```ts
+// vite.config.ts
+
+const defaultPlugins = []
+
+export default defineConfig(async ({ command, mode, isSsrBuild, isPreview }) => {
+	if (command === 'build') {
+  const { default: pluginPurgeCss } = await import('@myelophone/vite-plugin-purgecss')
+		defaultPlugins.push(pluginPurgeCss())
+	}
+ return {
+		plugins: defaultPlugins,
+ }
+}
 
 ```
 
