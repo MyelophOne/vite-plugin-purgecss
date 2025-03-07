@@ -8,22 +8,14 @@ This plugin is with actual updated dependencies.
 
 ## 📦 Install
 
-**Using npm**:
+**Add as a devDependency**:
 
 ```sh
-npm install --save-dev @myelophone/vite-plugin-purgecss
-```
-
-**Using yarn**:
-
-```sh
-yarn add -D @myelophone/vite-plugin-purgecss
-```
-
-**Using pnpm**:
-
-```sh
-pnpm add --save-dev @myelophone/vite-plugin-purgecss
+{
+ "devDependencies": {
+  "@myelophone/vite-plugin-purgecss": "https://github.com/myelophone/vite-plugin-purgecss.git",
+ }
+}
 ```
 
 ## 🚀 Usage
@@ -210,4 +202,5 @@ how this functionality could be implemented using the PurgeCSS CLI.
 ## 📄 License
 
 MIT License © 2025 [Aliaksandr Ivanou](https://github.com/myelophone)
+
 MIT License © 2023 [Joe Stanley](https://github.com/mojojoejo)
