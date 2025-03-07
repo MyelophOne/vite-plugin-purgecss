@@ -18,6 +18,12 @@ This plugin is with actual updated dependencies.
 }
 ```
 
+**And run install**:
+
+```sh
+yarn install
+```
+
 ## 🚀 Usage
 
 ### Basic
