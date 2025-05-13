@@ -4,7 +4,7 @@
 
 As @mojojoejo/vite-plugin-purgecss has been depreceated.
 
-This plugin is with actual updated dependencies.
+This plugin is with actual updated dependencies. Can be used with Nuxt3.
 
 ## 📦 Install
 
