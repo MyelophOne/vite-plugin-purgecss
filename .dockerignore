@@ -3,12 +3,15 @@ node_modules
 .pnp/
 .pnp.js
 .yarn/install-state.gz
-.yarn/unplugged
 
 # Yarn and npm logs
 yarn-error.log
 yarn-debug.log*
 npm-debug.log*
+
+# nuxt / vue
+.nuxt
+.output
 
 # Build outputs
 build/
@@ -46,8 +49,5 @@ README.md
 yarn.lock
 sample.json
 __tests__/
-.gitignore
-.storybook
-_playwright_
-_vitest_
-playwright-report
+__pycache__/
+*.pyc

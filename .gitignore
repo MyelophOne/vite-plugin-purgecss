@@ -19,6 +19,7 @@ yarn-error.log
 .pnp.*
 .pnpm-debug.log*
 npm-error.log
+.npmrc
 
 # Typescript
 *.tsbuildinfo
@@ -28,8 +29,7 @@ npm-error.log
 *.map
 
 # React
-build/
-#dist/
+dist/
 web-build/
 
 # React Native
@@ -210,8 +210,13 @@ lerna-debug.log*
 .env.*
 !.env.example
 
-# Nuxt.js
+# Nuxt dev/build outputs
+.output
+.data
 .nuxt
+.nitro
+.cache
+dist
 
 # Gatsby files
 .cache/
@@ -336,7 +341,6 @@ logs/
 *.rar
 *.7z
 *.bz2
-*.sql
 
 # Others
 *$py.class
