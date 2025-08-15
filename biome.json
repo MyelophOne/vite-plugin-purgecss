@@ -57,12 +57,12 @@
   "files": {
     "includes": [
       "**",
-      "!**/dist/**",
+      "!**/dist",
       "!**/*.cjs",
       "!**/*.mjs",
       "!**/*.d.ts",
-      "!**/node_modules/**",
-      "!**/.yarn/**"
+      "!**/node_modules",
+      "!**/.yarn"
     ]
   },
   "javascript": {
