@@ -9,7 +9,7 @@ updates:
       prefix: "deps"
     open-pull-requests-limit: 10
     allow:
-      - dependency-type: "all"
+      - dependency-type: "direct"
     ignore:
       - dependency-name: "yarn"
 
@@ -20,6 +20,28 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "deps(go)"
+    allow:
+      - dependency-type: "direct"
+
+  # PHP / Composer
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps(php)"
+    allow:
+      - dependency-type: "direct"
+
+  # Python / pip
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "deps(py)"
+    allow:
+      - dependency-type: "direct"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -28,6 +50,8 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "ci"
+    allow:
+      - dependency-type: "direct"
 
   # Docker
   - package-ecosystem: "docker"
@@ -36,3 +60,5 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: "docker"
+    allow:
+      - dependency-type: "direct"
